@@ -1,0 +1,21 @@
+import java.util.*; 
+import java.io.*; 
+ public class Main  
+ {
+ public static void main(String[] args)
+ {
+	int[] array_nums1 = {1, 11, 10, 2, 43, 20, 5};
+	int[] array_nums2 = {1, 13, 11, 2, 44, 30, 5};
+	System.out.println("Array1: "+Arrays.toString(array_nums1)); 
+	System.out.println("Array2: "+Arrays.toString(array_nums2)); 
+	int ctr = 0;
+    
+    for(int i = 0; i < array_nums1.length; i++) {
+        if(Math.abs(array_nums1[i] - array_nums2[i]) <= 1 && array_nums1[i] != array_nums2[i])
+            ctr++;
+    }
+                    
+    System.out.printf("Number of elements: "+ctr);
+	System.out.printf("\n");	 
+  }
+}
